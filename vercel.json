@@ -1,14 +1,3 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "api/*.js", "use": "@vercel/node" }
-  ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/admin", "dest": "/public/admin.html" },
-    { "src": "/admin.html", "dest": "/public/admin.html" },
-    { "src": "/", "dest": "/public/index.html" },
-    { "src": "/(.*\\.(?:js|css|png|jpg|ico|svg))", "dest": "/public/$1" },
-    { "src": "/(.*)", "dest": "/public/index.html" }
-  ]
+  "version": 2
 }

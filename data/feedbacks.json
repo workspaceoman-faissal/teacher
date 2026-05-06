@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "id": 1778098777792,
+    "date": "2026-05-06T20:19:37.792Z",
+    "name": "تميم",
+    "class": "تاسع 1",
+    "years": "سنة كاملة",
+    "teaching": {
+      "clarity": 5,
+      "practical": 5,
+      "time": 5,
+      "tools": 5,
+      "style": "تطبيق عملي",
+      "comment": "تعليم مشوق"
+    },
+    "attitude": {
+      "respect": 1,
+      "questions": 1,
+      "encourage": 1,
+      "fair": 3,
+      "overall_att": "ممتاز ومحفز",
+      "comfort": "نعم دائماً",
+      "comment": "تعامل راقي"
+    },
+    "overall": {
+      "score": 2,
+      "recommend": "نعم بشدة",
+      "best": "التعامل الجيد",
+      "suggest": "شكرا",
+      "story": ""
+    }
+  }
+]

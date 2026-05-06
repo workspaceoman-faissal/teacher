@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تقييم المعلم — رأيك يبني</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d1117;--ink2:#3d4451;--ink3:#8b95a5;
+  --line:#e8eaed;--bg:#f5f6f8;--white:#fff;
+  --teal:#0891b2;--teal-d:#0e7490;--teal-l:#e0f7fa;
+  --gold:#d97706;--gold-l:#fef3c7;
+  --rose:#e11d48;--rose-l:#fff1f2;
+  --green:#059669;--green-l:#d1fae5;
+  --r:14px;--rs:9px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--ink);direction:rtl;min-height:100vh}
+
+.top-banner{background:linear-gradient(135deg,#0c4a6e,#0891b2 60%,#06b6d4);padding:0 20px;position:sticky;top:0;z-index:99}
+.banner-inner{max-width:680px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between}
+.banner-brand{display:flex;align-items:center;gap:10px}
+.banner-dot{width:36px;height:36px;background:rgba(255,255,255,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;border:1px solid rgba(255,255,255,.2)}
+.banner-name{color:white;font-size:15px;font-weight:800}
+.banner-sub{color:rgba(255,255,255,.65);font-size:11px;margin-top:1px}
+.banner-pill{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:white;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px}
+
+.wrap{max-width:680px;margin:0 auto;padding:28px 16px 80px}
+
+.hero{background:linear-gradient(135deg,#0c4a6e,#0891b2);border-radius:var(--r);padding:34px 28px;color:white;margin-bottom:22px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:220px;height:220px;background:rgba(255,255,255,.06);border-radius:50%}
+.hero-label{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);color:white;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:14px}
+.hero h1{font-size:24px;font-weight:900;line-height:1.3;margin-bottom:10px}
+.hero p{font-size:14px;opacity:.85;line-height:1.8}
+.hero-footer{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);display:flex;gap:24px;flex-wrap:wrap}
+.hero-stat-n{font-size:22px;font-weight:900}
+.hero-stat-l{font-size:11px;opacity:.7;margin-top:2px}
+
+.prog-wrap{background:white;border:1px solid var(--line);border-radius:var(--r);padding:16px 22px;margin-bottom:16px}
+.prog-label{display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:var(--ink2);margin-bottom:8px}
+.prog-track{background:var(--bg);border-radius:20px;height:8px;overflow:hidden}
+.prog-fill{height:100%;background:linear-gradient(90deg,#06b6d4,#0891b2);border-radius:20px;transition:width .4s ease}
+
+.closed-notice{background:var(--gold-l);border:1px solid #fcd34d;border-radius:var(--rs);padding:14px 18px;font-size:14px;font-weight:600;color:var(--gold);display:none;margin-bottom:16px;text-align:center}
+
+.section-card{background:white;border:1px solid var(--line);border-radius:var(--r);padding:24px 22px;margin-bottom:16px}
+.sec-head{display:flex;align-items:center;gap:12px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:20px}
+.sec-num{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0}
+.sec-num.teal{background:var(--teal-l);color:var(--teal-d)}
+.sec-num.gold{background:var(--gold-l);color:var(--gold)}
+.sec-num.rose{background:var(--rose-l);color:var(--rose)}
+.sec-title{font-size:16px;font-weight:800;color:var(--ink)}
+.sec-sub{font-size:12px;color:var(--ink3);margin-top:2px}
+
+.rating-block{margin-bottom:20px}
+.rating-q{font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.stars-row{display:flex;gap:4px;direction:ltr;align-items:center}
+.star-btn{font-size:30px;cursor:pointer;color:#dde0e4;transition:color .1s,transform .12s;border:none;background:none;padding:2px;line-height:1}
+.star-btn:hover,.star-btn.lit{color:#f59e0b}
+.star-btn:hover{transform:scale(1.15)}
+.star-desc{font-size:11px;color:var(--ink3);margin-right:10px;min-width:70px;transition:color .2s}
+
+.fg{margin-bottom:16px}
+.fg:last-child{margin-bottom:0}
+.fg-label{font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:9px;display:flex;align-items:center;gap:6px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill-r{display:none}
+.pill-l{padding:8px 16px;border:1.5px solid var(--line);border-radius:30px;font-size:13px;font-weight:600;cursor:pointer;color:var(--ink3);transition:all .15s;user-select:none}
+.pill-r:checked+.pill-l{background:var(--teal);border-color:var(--teal);color:white}
+
+.form-ta{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:var(--rs);font-family:'Tajawal',sans-serif;font-size:14px;color:var(--ink);background:white;resize:vertical;min-height:95px;outline:none;transition:border-color .15s;line-height:1.7}
+.form-ta:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(8,145,178,.1)}
+.ta-wrap{position:relative}
+.char-count{position:absolute;bottom:10px;left:12px;font-size:11px;color:var(--ink3)}
+
+.form-in,.form-sel{width:100%;padding:11px 14px;border:1.5px solid var(--line);border-radius:var(--rs);font-family:'Tajawal',sans-serif;font-size:14px;color:var(--ink);background:white;outline:none;transition:border-color .15s}
+.form-in:focus,.form-sel:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(8,145,178,.1)}
+
+.alert{display:none;padding:13px 16px;border-radius:var(--rs);font-size:13px;margin-bottom:14px;font-weight:600}
+.alert.show{display:flex;align-items:center;gap:8px}
+.err{background:var(--rose-l);color:var(--rose);border:1px solid #fecdd3}
+
+.btn-submit{width:100%;padding:16px;background:linear-gradient(135deg,#0891b2,#0c4a6e);color:white;border:none;border-radius:var(--rs);font-family:'Tajawal',sans-serif;font-size:16px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:opacity .2s,transform .1s}
+.btn-submit:hover{opacity:.92}
+.btn-submit:active{transform:scale(.99)}
+.btn-submit:disabled{background:#9ca3af;cursor:not-allowed}
+.spin{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.35);border-top-color:white;border-radius:50%;animation:spin .6s linear infinite;display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+#success-view{display:none;text-align:center;padding:70px 20px}
+.suc-ring{width:90px;height:90px;border-radius:50%;background:var(--green-l);display:flex;align-items:center;justify-content:center;font-size:42px;margin:0 auto 22px}
+#success-view h2{font-size:24px;font-weight:900;margin-bottom:10px}
+#success-view p{font-size:14px;color:var(--ink2);line-height:1.8;max-width:340px;margin:0 auto}
+.btn-again{display:inline-block;margin-top:26px;padding:12px 30px;background:var(--teal-l);color:var(--teal-d);border:none;border-radius:var(--rs);font-family:'Tajawal',sans-serif;font-size:14px;font-weight:700;cursor:pointer}
+
+.site-footer{text-align:center;font-size:12px;color:var(--ink3);padding:20px}
+.site-footer a{color:var(--teal);text-decoration:none;font-weight:600}
+
+@media(max-width:500px){.hero{padding:24px 18px}.section-card{padding:18px 14px}.wrap{padding:20px 12px 70px}.hero h1{font-size:20px}}
+</style>
+</head>
+<body>
+
+<header class="top-banner">
+  <div class="banner-inner">
+    <div class="banner-brand">
+      <div class="banner-dot">📋</div>
+      <div>
+        <div class="banner-name">تقييم المعلم</div>
+        <div class="banner-sub">استبيان سري وآمن</div>
+      </div>
+    </div>
+    <span class="banner-pill" id="status-pill">● مفتوح</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="prog-wrap" id="prog-wrap">
+    <div class="prog-label"><span>اكتمال النموذج</span><span id="pct-text">0%</span></div>
+    <div class="prog-track"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
+  </div>
+
+  <div class="closed-notice" id="closed-notice">⚠️ الاستبيان مغلق مؤقتاً ولا يقبل ردوداً جديدة</div>
+
+  <div id="form-view">
+    <div class="hero">
+      <div class="hero-label">🎓 تقنية المعلومات</div>
+      <h1>صوتك يصنع الفرق</h1>
+      <p>هذا الاستبيان لتقييم المعلم في ثلاثة محاور: طريقة التعليم، أسلوب التعامل، والانطباع العام. ردودك سرية تماماً.</p>
+      <div class="hero-footer">
+        <div><div class="hero-stat-n">3</div><div class="hero-stat-l">محاور تقييم</div></div>
+        <div><div class="hero-stat-n">🔒</div><div class="hero-stat-l">سري تماماً</div></div>
+        <div><div class="hero-stat-n">~5</div><div class="hero-stat-l">دقائق فقط</div></div>
+      </div>
+    </div>
+
+    <div class="alert err" id="main-alert"><span>⚠️</span><span id="alert-msg"></span></div>
+
+    <form id="eval-form" onsubmit="return false">
+
+      <!-- معلومات الطالب -->
+      <div class="section-card">
+        <div class="sec-head">
+          <div class="sec-num teal">👤</div>
+          <div><div class="sec-title">معلوماتك</div><div class="sec-sub">الاسم اختياري — يمكنك البقاء مجهولاً</div></div>
+        </div>
+        <div class="fg">
+          <label class="fg-label">الاسم (اختياري)</label>
+          <input class="form-in" id="s-name" type="text" placeholder="يمكنك تركه فارغاً">
+        </div>
+        <div class="fg">
+          <label class="fg-label">الصف / الشعبة <span style="color:var(--rose)">*</span></label>
+          <select class="form-sel" id="s-class">
+            <option value="">— اختر الصف —</option>
+            <option>أول ثانوي — أ</option><option>أول ثانوي — ب</option>
+            <option>ثاني ثانوي — أ</option><option>ثاني ثانوي — ب</option>
+            <option>ثالث ثانوي — أ</option><option>ثالث ثانوي — ب</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label class="fg-label">كم سنة تدرس مع هذا المعلم؟</label>
+          <div class="pills">
+            <input type="radio" name="years" id="y1" value="أقل من سنة" class="pill-r"><label for="y1" class="pill-l">أقل من سنة</label>
+            <input type="radio" name="years" id="y2" value="سنة كاملة" class="pill-r"><label for="y2" class="pill-l">سنة كاملة</label>
+            <input type="radio" name="years" id="y3" value="أكثر من سنة" class="pill-r"><label for="y3" class="pill-l">أكثر من سنة</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- المحور الأول: طريقة التعليم -->
+      <div class="section-card">
+        <div class="sec-head">
+          <div class="sec-num teal">١</div>
+          <div><div class="sec-title">طريقة التعليم والشرح</div><div class="sec-sub">كيف تقيّم أسلوب المعلم في إيصال المعلومة؟</div></div>
+        </div>
+        <div class="rating-block">
+          <div class="rating-q"><span>📖</span> وضوح الشرح وسهولة الفهم</div>
+          <div class="stars-row" id="sr-clarity">
+            <button type="button" class="star-btn" onclick="setStars('clarity',1)">★</button><button type="button" class="star-btn" onclick="setStars('clarity',2)">★</button><button type="button" class="star-btn" onclick="setStars('clarity',3)">★</button><button type="button" class="star-btn" onclick="setStars('clarity',4)">★</button><button type="button" class="star-btn" onclick="setStars('clarity',5)">★</button>
+            <span class="star-desc" id="sd-clarity">اختر</span>
+          </div>
+        </div>
+        <div class="rating-block">
+          <div class="rating-q"><span>🎯</span> ربط المادة بالواقع والأمثلة العملية</div>
+          <div class="stars-row" id="sr-practical">
+            <button type="button" class="star-btn" onclick="setStars('practical',1)">★</button><button type="button" class="star-btn" onclick="setStars('practical',2)">★</button><button type="button" class="star-btn" onclick="setStars('practical',3)">★</button><button type="button" class="star-btn" onclick="setStars('practical',4)">★</button><button type="button" class="star-btn" onclick="setStars('practical',5)">★</button>
+            <span class="star-desc" id="sd-practical">اختر</span>
+          </div>
+        </div>
+        <div class="rating-block">
+          <div class="rating-q"><span>⏱️</span> إدارة الوقت داخل الحصة</div>
+          <div class="stars-row" id="sr-time">
+            <button type="button" class="star-btn" onclick="setStars('time',1)">★</button><button type="button" class="star-btn" onclick="setStars('time',2)">★</button><button type="button" class="star-btn" onclick="setStars('time',3)">★</button><button type="button" class="star-btn" onclick="setStars('time',4)">★</button><button type="button" class="star-btn" onclick="setStars('time',5)">★</button>
+            <span class="star-desc" id="sd-time">اختر</span>
+          </div>
+        </div>
+        <div class="rating-block">
+          <div class="rating-q"><span>💻</span> استخدام الوسائل التقنية والتعليمية</div>
+          <div class="stars-row" id="sr-tools">
+            <button type="button" class="star-btn" onclick="setStars('tools',1)">★</button><button type="button" class="star-btn" onclick="setStars('tools',2)">★</button><button type="button" class="star-btn" onclick="setStars('tools',3)">★</button><button type="button" class="star-btn" onclick="setStars('tools',4)">★</button><button type="button" class="star-btn" onclick="setStars('tools',5)">★</button>
+            <span class="star-desc" id="sd-tools">اختر</span>
+          </div>
+        </div>
+        <div class="fg" style="margin-top:20px">
+          <label class="fg-label">أسلوب الشرح الذي تفضله</label>
+          <div class="pills">
+            <input type="radio" name="style" id="st1" value="شرح نظري" class="pill-r"><label for="st1" class="pill-l">📝 نظري</label>
+            <input type="radio" name="style" id="st2" value="تطبيق عملي" class="pill-r"><label for="st2" class="pill-l">💻 عملي</label>
+            <input type="radio" name="style" id="st3" value="فيديوهات" class="pill-r"><label for="st3" class="pill-l">🎬 فيديوهات</label>
+            <input type="radio" name="style" id="st4" value="نقاش جماعي" class="pill-r"><label for="st4" class="pill-l">💬 نقاش</label>
+            <input type="radio" name="style" id="st5" value="مشاريع" class="pill-r"><label for="st5" class="pill-l">🛠️ مشاريع</label>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fg-label">تعليقك على طريقة التعليم</label>
+          <div class="ta-wrap">
+            <textarea class="form-ta" id="t-teaching" maxlength="400" placeholder="ما الذي يميز طريقة شرحه؟ ما الذي تتمنى تحسينه؟" oninput="countChars('t-teaching','cc-teaching',400);updateProgress()"></textarea>
+            <span class="char-count" id="cc-teaching">0 / 400</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- المحور الثاني: التعامل -->
+      <div class="section-card">
+        <div class="sec-head">
+          <div class="sec-num gold">٢</div>
+          <div><div class="sec-title">التعامل مع الطلاب</div><div class="sec-sub">كيف تقيّم علاقة المعلم بطلابه؟</div></div>
+        </div>
+        <div class="rating-block">
+          <div class="rating-q"><span>🤝</span> الاحترام والتعامل اللائق</div>
+          <div class="stars-row" id="sr-respect">
+            <button type="button" class="star-btn" onclick="setStars('respect',1)">★</button><button type="button" class="star-btn" onclick="setStars('respect',2)">★</button><button type="button" class="star-btn" onclick="setStars('respect',3)">★</button><button type="button" class="star-btn" onclick="setStars('respect',4)">★</button><button type="button" class="star-btn" onclick="setStars('respect',5)">★</button>
+            <span class="star-desc" id="sd-respect">اختر</span>
+          </div>
+        </div>
+        <div class="rating-block">
+          <div class="rating-q"><span>❓</span> الاستجابة للأسئلة وعدم الإحراج</div>
+          <div class="stars-row" id="sr-questions">
+            <button type="button" class="star-btn" onclick="setStars('questions',1)">★</button><button type="button" class="star-btn" onclick="setStars('questions',2)">★</button><button type="button" class="star-btn" onclick="setStars('questions',3)">★</button><button type="button" class="star-btn" onclick="setStars('questions',4)">★</button><button type="button" class="star-btn" onclick="setStars('questions',5)">★</button>
+            <span class="star-desc" id="sd-questions">اختر</span>
+          </div>
+        </div>
+        <div class="rating-block">
+          <div class="rating-q"><span>🌟</span> التشجيع وبناء الثقة بالنفس</div>
+          <div class="stars-row" id="sr-encourage">
+            <button type="button" class="star-btn" onclick="setStars('encourage',1)">★</button><button type="button" class="star-btn" onclick="setStars('encourage',2)">★</button><button type="button" class="star-btn" onclick="setStars('encourage',3)">★</button><button type="button" class="star-btn" onclick="setStars('encourage',4)">★</button><button type="button" class="star-btn" onclick="setStars('encourage',5)">★</button>
+            <span class="star-desc" id="sd-encourage">اختر</span>
+          </div>
+        </div>
+        <div class="rating-block">
+          <div class="rating-q"><span>⚖️</span> العدل والمساواة بين الطلاب</div>
+          <div class="stars-row" id="sr-fair">
+            <button type="button" class="star-btn" onclick="setStars('fair',1)">★</button><button type="button" class="star-btn" onclick="setStars('fair',2)">★</button><button type="button" class="star-btn" onclick="setStars('fair',3)">★</button><button type="button" class="star-btn" onclick="setStars('fair',4)">★</button><button type="button" class="star-btn" onclick="setStars('fair',5)">★</button>
+            <span class="star-desc" id="sd-fair">اختر</span>
+          </div>
+        </div>
+        <div class="fg" style="margin-top:20px">
+          <label class="fg-label">كيف تصف تعامله معك عموماً؟</label>
+          <div class="pills">
+            <input type="radio" name="attitude" id="at1" value="ممتاز ومحفز" class="pill-r"><label for="at1" class="pill-l">😊 ممتاز</label>
+            <input type="radio" name="attitude" id="at2" value="جيد ومحترم" class="pill-r"><label for="at2" class="pill-l">🙂 جيد</label>
+            <input type="radio" name="attitude" id="at3" value="محايد" class="pill-r"><label for="at3" class="pill-l">😐 محايد</label>
+            <input type="radio" name="attitude" id="at4" value="يحتاج تحسين" class="pill-r"><label for="at4" class="pill-l">😕 يحتاج تحسين</label>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fg-label">هل تشعر بالراحة في طرح أسئلتك؟</label>
+          <div class="pills">
+            <input type="radio" name="comfort" id="co1" value="نعم دائماً" class="pill-r"><label for="co1" class="pill-l">نعم دائماً</label>
+            <input type="radio" name="comfort" id="co2" value="أحياناً" class="pill-r"><label for="co2" class="pill-l">أحياناً</label>
+            <input type="radio" name="comfort" id="co3" value="نادراً" class="pill-r"><label for="co3" class="pill-l">نادراً</label>
+            <input type="radio" name="comfort" id="co4" value="لا أبداً" class="pill-r"><label for="co4" class="pill-l">لا أبداً</label>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fg-label">تعليقك على أسلوب التعامل</label>
+          <div class="ta-wrap">
+            <textarea class="form-ta" id="t-attitude" maxlength="400" placeholder="ما الذي أعجبك في تعامله؟ ما الذي تتمنى أن يتغير؟" oninput="countChars('t-attitude','cc-attitude',400);updateProgress()"></textarea>
+            <span class="char-count" id="cc-attitude">0 / 400</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- المحور الثالث: الانطباع العام -->
+      <div class="section-card">
+        <div class="sec-head">
+          <div class="sec-num rose">٣</div>
+          <div><div class="sec-title">الانطباع العام والمقترحات</div><div class="sec-sub">تقييمك الكلي وأهم اقتراحاتك</div></div>
+        </div>
+        <div class="rating-block">
+          <div class="rating-q"><span>🏆</span> تقييمك الكلي للمعلم</div>
+          <div class="stars-row" id="sr-overall">
+            <button type="button" class="star-btn" onclick="setStars('overall',1)">★</button><button type="button" class="star-btn" onclick="setStars('overall',2)">★</button><button type="button" class="star-btn" onclick="setStars('overall',3)">★</button><button type="button" class="star-btn" onclick="setStars('overall',4)">★</button><button type="button" class="star-btn" onclick="setStars('overall',5)">★</button>
+            <span class="star-desc" id="sd-overall">اختر</span>
+          </div>
+        </div>
+        <div class="fg" style="margin-top:20px">
+          <label class="fg-label">هل تنصح زملاءك بهذا المعلم؟ <span style="color:var(--rose)">*</span></label>
+          <div class="pills">
+            <input type="radio" name="recommend" id="re1" value="نعم بشدة" class="pill-r"><label for="re1" class="pill-l">👍 نعم بشدة</label>
+            <input type="radio" name="recommend" id="re2" value="ربما" class="pill-r"><label for="re2" class="pill-l">🤔 ربما</label>
+            <input type="radio" name="recommend" id="re3" value="لا" class="pill-r"><label for="re3" class="pill-l">👎 لا</label>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fg-label">ما أكثر شيء أعجبك في هذا المعلم؟</label>
+          <div class="pills">
+            <input type="radio" name="best" id="b1" value="طريقة الشرح" class="pill-r"><label for="b1" class="pill-l">طريقة الشرح</label>
+            <input type="radio" name="best" id="b2" value="التعامل الجيد" class="pill-r"><label for="b2" class="pill-l">التعامل الجيد</label>
+            <input type="radio" name="best" id="b3" value="الحماس والتحفيز" class="pill-r"><label for="b3" class="pill-l">الحماس</label>
+            <input type="radio" name="best" id="b4" value="الخبرة والمعرفة" class="pill-r"><label for="b4" class="pill-l">الخبرة</label>
+            <input type="radio" name="best" id="b5" value="الصبر والهدوء" class="pill-r"><label for="b5" class="pill-l">الصبر</label>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fg-label">أهم اقتراح تقدمه للمعلم <span style="color:var(--rose)">*</span></label>
+          <div class="ta-wrap">
+            <textarea class="form-ta" id="t-suggest" maxlength="500" placeholder="اكتب اقتراحاتك بحرية... كلامك يصل للمعلم" oninput="countChars('t-suggest','cc-suggest',500);updateProgress()"></textarea>
+            <span class="char-count" id="cc-suggest">0 / 500</span>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fg-label">موقف تريد مشاركته (اختياري)</label>
+          <div class="ta-wrap">
+            <textarea class="form-ta" id="t-story" maxlength="400" placeholder="موقف إيجابي أو سلبي أثّر فيك..." oninput="countChars('t-story','cc-story',400)"></textarea>
+            <span class="char-count" id="cc-story">0 / 400</span>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn-submit" id="submit-btn" onclick="doSubmit()">
+        <span id="btn-label">إرسال تقييمي</span>
+        <span id="btn-ico">✈️</span>
+        <div class="spin" id="btn-spin"></div>
+      </button>
+    </form>
+  </div>
+
+  <div id="success-view">
+    <div class="suc-ring">✅</div>
+    <h2>شكراً جزيلاً!</h2>
+    <p>وصلنا تقييمك بنجاح. رأيك يساهم في تطوير بيئة تعليمية أفضل.</p>
+    <button class="btn-again" onclick="resetForm()">إرسال تقييم آخر</button>
+  </div>
+</main>
+
+<footer class="site-footer">
+  جميع الردود سرية ومحمية &nbsp;|&nbsp; <a href="admin.html">لوحة تحكم المعلم</a>
+</footer>
+
+<script>
+// ══════════════════════════════════════════════
+// لا يوجد هنا أي بيانات سرية — كل شيء عبر API
+// ══════════════════════════════════════════════
+const API = '/api';
+
+const R = { clarity:0, practical:0, time:0, tools:0, respect:0, questions:0, encourage:0, fair:0, overall:0 };
+const LABELS = ['','ضعيف','مقبول','جيد','جيد جداً','ممتاز ✨'];
+
+function setStars(key, val) {
+  R[key] = val;
+  document.querySelectorAll(`#sr-${key} .star-btn`).forEach((b,i) => b.classList.toggle('lit', i < val));
+  const el = document.getElementById(`sd-${key}`);
+  el.textContent = LABELS[val];
+  el.style.color = val >= 4 ? 'var(--green)' : val === 3 ? 'var(--gold)' : 'var(--rose)';
+  updateProgress();
+}
+
+function countChars(id, cid, max) {
+  document.getElementById(cid).textContent = document.getElementById(id).value.length + ' / ' + max;
+}
+
+function updateProgress() {
+  let filled = 0, total = 0;
+  Object.values(R).forEach(v => { total++; if(v>0) filled++; });
+  ['s-class','t-suggest'].forEach(id => { total++; if(document.getElementById(id)?.value.trim()) filled++; });
+  ['recommend'].forEach(n => { total++; if(document.querySelector(`input[name="${n}"]:checked`)) filled++; });
+  const pct = Math.round(filled/total*100);
+  document.getElementById('prog-fill').style.width = pct+'%';
+  document.getElementById('pct-text').textContent = pct+'%';
+}
+
+async function doSubmit() {
+  const al = document.getElementById('main-alert');
+  al.classList.remove('show');
+
+  const cls      = document.getElementById('s-class').value;
+  const suggest  = document.getElementById('t-suggest').value.trim();
+  const recommend = document.querySelector('input[name="recommend"]:checked')?.value;
+
+  if (!cls)      { showErr('الرجاء اختيار الصف والشعبة'); return; }
+  if (!R.clarity || !R.respect || !R.overall) { showErr('الرجاء إكمال التقييمات بالنجوم في المحاور الثلاثة'); return; }
+  if (!recommend) { showErr('الرجاء الإجابة على سؤال التوصية'); return; }
+  if (!suggest)   { showErr('الرجاء كتابة اقتراح واحد على الأقل'); return; }
+
+  const entry = {
+    id:   Date.now(),
+    date: new Date().toISOString(),
+    name: document.getElementById('s-name').value.trim() || 'مجهول',
+    class: cls,
+    years: document.querySelector('input[name="years"]:checked')?.value || '',
+    teaching: {
+      clarity: R.clarity, practical: R.practical, time: R.time, tools: R.tools,
+      style:   document.querySelector('input[name="style"]:checked')?.value || '',
+      comment: document.getElementById('t-teaching').value.trim()
+    },
+    attitude: {
+      respect: R.respect, questions: R.questions, encourage: R.encourage, fair: R.fair,
+      overall_att: document.querySelector('input[name="attitude"]:checked')?.value || '',
+      comfort:     document.querySelector('input[name="comfort"]:checked')?.value || '',
+      comment:     document.getElementById('t-attitude').value.trim()
+    },
+    overall: {
+      score: R.overall, recommend,
+      best:  document.querySelector('input[name="best"]:checked')?.value || '',
+      suggest,
+      story: document.getElementById('t-story').value.trim()
+    }
+  };
+
+  setBtnLoading(true);
+
+  try {
+    const res = await fetch(`${API}/submit`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(entry)
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'فشل الإرسال');
+    showSuccess();
+  } catch(e) {
+    setBtnLoading(false);
+    showErr('حدث خطأ أثناء الإرسال: ' + e.message);
+  }
+}
+
+function setBtnLoading(on) {
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = on;
+  document.getElementById('btn-label').textContent = on ? 'جاري الإرسال...' : 'إرسال تقييمي';
+  document.getElementById('btn-ico').style.display = on ? 'none' : '';
+  document.getElementById('btn-spin').style.display = on ? 'block' : 'none';
+}
+
+function showErr(msg) {
+  document.getElementById('alert-msg').textContent = msg;
+  document.getElementById('main-alert').classList.add('show');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function showSuccess() {
+  document.getElementById('form-view').style.display = 'none';
+  document.getElementById('prog-wrap').style.display = 'none';
+  document.getElementById('success-view').style.display = 'block';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function resetForm() {
+  document.getElementById('eval-form').reset();
+  Object.keys(R).forEach(k => R[k] = 0);
+  document.querySelectorAll('.star-btn').forEach(b => b.classList.remove('lit'));
+  document.querySelectorAll('.star-desc').forEach(el => { el.textContent='اختر'; el.style.color=''; });
+  setBtnLoading(false);
+  document.getElementById('main-alert').classList.remove('show');
+  document.getElementById('form-view').style.display = '';
+  document.getElementById('prog-wrap').style.display = '';
+  document.getElementById('success-view').style.display = 'none';
+  updateProgress();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// تحقق هل الاستبيان مفتوح
+(async function checkStatus() {
+  try {
+    const r = await fetch(`${API}/config`);
+    const cfg = await r.json();
+    if (!cfg.isOpen) {
+      document.getElementById('closed-notice').style.display = 'block';
+      document.getElementById('submit-btn').disabled = true;
+      document.getElementById('status-pill').textContent = '● مغلق';
+      document.getElementById('status-pill').style.background = 'rgba(225,29,72,.2)';
+    }
+  } catch(e) {}
+})();
+</script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -215,5 +215,36 @@
       "suggest": "جزاك الله خير",
       "story": "عدم الجواب"
     }
+  },
+  {
+    "id": 1778126164258,
+    "date": "2026-05-07T03:56:04.258Z",
+    "name": "عقيل محمد عقيل المشهور باعمر",
+    "class": "تاسع 2",
+    "years": "أكثر من سنة",
+    "teaching": {
+      "clarity": 5,
+      "practical": 3,
+      "time": 3,
+      "tools": 4,
+      "style": "تطبيق عملي",
+      "comment": "ممتاز"
+    },
+    "attitude": {
+      "respect": 4,
+      "questions": 5,
+      "encourage": 3,
+      "fair": 5,
+      "overall_att": "ممتاز ومحفز",
+      "comfort": "نعم دائماً",
+      "comment": "الاستجابة للاسئلة"
+    },
+    "overall": {
+      "score": 4,
+      "recommend": "نعم بشدة",
+      "best": "طريقة الشرح",
+      "suggest": "شكرا",
+      "story": ""
+    }
   }
 ]

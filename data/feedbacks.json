@@ -370,5 +370,36 @@
       "suggest": "ان يرسل الطلبه المشاغبين و الغير مهتميين بالحصه للمدير",
       "story": ""
     }
+  },
+  {
+    "id": 1778136412813,
+    "date": "2026-05-07T06:46:52.813Z",
+    "name": "عبدالمنعم ابوبكر قاسم",
+    "class": "سابع 3",
+    "years": "سنة كاملة",
+    "teaching": {
+      "clarity": 5,
+      "practical": 5,
+      "time": 4,
+      "tools": 5,
+      "style": "",
+      "comment": ""
+    },
+    "attitude": {
+      "respect": 4,
+      "questions": 5,
+      "encourage": 5,
+      "fair": 4,
+      "overall_att": "ممتاز ومحفز",
+      "comfort": "",
+      "comment": "ممتاز ويجيد الشرح"
+    },
+    "overall": {
+      "score": 5,
+      "recommend": "نعم بشدة",
+      "best": "الخبرة والمعرفة",
+      "suggest": "ان يضف لنا وقت للعب",
+      "story": ""
+    }
   }
 ]

@@ -29,5 +29,36 @@
       "suggest": "ان يخصص وقت للشرح و العمل",
       "story": ""
     }
+  },
+  {
+    "id": 1778126004942,
+    "date": "2026-05-07T03:53:24.942Z",
+    "name": "علي بن خالد احمد رجب البهدور",
+    "class": "تاسع 2",
+    "years": "أكثر من سنة",
+    "teaching": {
+      "clarity": 5,
+      "practical": 2,
+      "time": 2,
+      "tools": 4,
+      "style": "تطبيق عملي",
+      "comment": "شكرا"
+    },
+    "attitude": {
+      "respect": 4,
+      "questions": 3,
+      "encourage": 4,
+      "fair": 4,
+      "overall_att": "جيد ومحترم",
+      "comfort": "نعم دائماً",
+      "comment": "شكرا"
+    },
+    "overall": {
+      "score": 4,
+      "recommend": "نعم بشدة",
+      "best": "طريقة الشرح",
+      "suggest": "شكرا",
+      "story": "شكرا"
+    }
   }
 ]

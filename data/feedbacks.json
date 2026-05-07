@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "id": 1778125971361,
+    "date": "2026-05-07T03:52:51.361Z",
+    "name": "مثنى احمد",
+    "class": "تاسع 2",
+    "years": "أكثر من سنة",
+    "teaching": {
+      "clarity": 5,
+      "practical": 5,
+      "time": 4,
+      "tools": 4,
+      "style": "تطبيق عملي",
+      "comment": "يذكر امثلة مع الشرح"
+    },
+    "attitude": {
+      "respect": 5,
+      "questions": 4,
+      "encourage": 4,
+      "fair": 5,
+      "overall_att": "ممتاز ومحفز",
+      "comfort": "أحياناً",
+      "comment": "اسلوب مميز  ولا يوذي الطلاب"
+    },
+    "overall": {
+      "score": 5,
+      "recommend": "نعم بشدة",
+      "best": "طريقة الشرح",
+      "suggest": "ان يخصص وقت للشرح و العمل",
+      "story": ""
+    }
+  }
+]

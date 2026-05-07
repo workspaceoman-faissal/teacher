@@ -525,5 +525,36 @@
       "suggest": "انه معلم جيد و يعرف يشرح بدقه عاليه و تندمج مع شرحه",
       "story": ""
     }
+  },
+  {
+    "id": 1778136465424,
+    "date": "2026-05-07T06:47:45.424Z",
+    "name": "حسن محمد حسن",
+    "class": "سابع 3",
+    "years": "سنة كاملة",
+    "teaching": {
+      "clarity": 5,
+      "practical": 5,
+      "time": 4,
+      "tools": 5,
+      "style": "تطبيق عملي",
+      "comment": "يشرح جيدا"
+    },
+    "attitude": {
+      "respect": 5,
+      "questions": 5,
+      "encourage": 5,
+      "fair": 4,
+      "overall_att": "ممتاز ومحفز",
+      "comfort": "نعم دائماً",
+      "comment": "الشرح الجيد \nالمعاملة"
+    },
+    "overall": {
+      "score": 5,
+      "recommend": "نعم بشدة",
+      "best": "التعامل الجيد",
+      "suggest": "ان يضيف وقت للكلام",
+      "story": "المشاركة في الصف"
+    }
   }
 ]

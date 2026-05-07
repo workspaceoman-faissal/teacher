@@ -184,5 +184,36 @@
       "suggest": "شكرا ليك يا استاذ",
       "story": "استاذ عادل مع الجميع ولا يفرز بيننا"
     }
+  },
+  {
+    "id": 1778126089832,
+    "date": "2026-05-07T03:54:49.832Z",
+    "name": "علي",
+    "class": "تاسع 2",
+    "years": "أكثر من سنة",
+    "teaching": {
+      "clarity": 5,
+      "practical": 4,
+      "time": 4,
+      "tools": 5,
+      "style": "تطبيق عملي",
+      "comment": "جيد وفهم الدرس"
+    },
+    "attitude": {
+      "respect": 4,
+      "questions": 3,
+      "encourage": 5,
+      "fair": 3,
+      "overall_att": "جيد ومحترم",
+      "comfort": "نادراً",
+      "comment": "جيد"
+    },
+    "overall": {
+      "score": 4,
+      "recommend": "ربما",
+      "best": "طريقة الشرح",
+      "suggest": "جزاك الله خير",
+      "story": "عدم الجواب"
+    }
   }
 ]

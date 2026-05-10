@@ -2571,5 +2571,36 @@
       "suggest": "جيد",
       "story": "يرفع الصوت"
     }
+  },
+  {
+    "id": 1778392003051,
+    "date": "2026-05-10T05:46:43.051Z",
+    "name": "احمد محمد",
+    "class": "سابع 1",
+    "years": "أقل من سنة",
+    "teaching": {
+      "clarity": 1,
+      "practical": 1,
+      "time": 1,
+      "tools": 1,
+      "style": "مشاريع",
+      "comment": "طيبيق الدرس"
+    },
+    "attitude": {
+      "respect": 1,
+      "questions": 1,
+      "encourage": 1,
+      "fair": 1,
+      "overall_att": "يحتاج تحسين",
+      "comfort": "لا أبداً",
+      "comment": "ضعيف"
+    },
+    "overall": {
+      "score": 1,
+      "recommend": "لا",
+      "best": "الخبرة والمعرفة",
+      "suggest": "يطبق الدرس",
+      "story": "يرفع الصوت بشدة"
+    }
   }
 ]

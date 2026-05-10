@@ -1455,5 +1455,36 @@
       "suggest": "ان يكون احسن معلم في السلطنه",
       "story": "استاذ مرح"
     }
+  },
+  {
+    "id": 1778384690981,
+    "date": "2026-05-10T03:44:50.981Z",
+    "name": "عبد العزيز",
+    "class": "خامس 2",
+    "years": "سنة كاملة",
+    "teaching": {
+      "clarity": 5,
+      "practical": 5,
+      "time": 5,
+      "tools": 5,
+      "style": "مشاريع",
+      "comment": "الفةم"
+    },
+    "attitude": {
+      "respect": 5,
+      "questions": 5,
+      "encourage": 5,
+      "fair": 5,
+      "overall_att": "",
+      "comfort": "",
+      "comment": "معلم ممتاز"
+    },
+    "overall": {
+      "score": 5,
+      "recommend": "نعم بشدة",
+      "best": "طريقة الشرح",
+      "suggest": "لشيؤء",
+      "story": "رياقىقخسه6"
+    }
   }
 ]

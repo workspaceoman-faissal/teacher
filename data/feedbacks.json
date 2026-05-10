@@ -2540,5 +2540,36 @@
       "suggest": "ان",
       "story": ""
     }
+  },
+  {
+    "id": 1778391816995,
+    "date": "2026-05-10T05:43:36.995Z",
+    "name": "احمد محمد",
+    "class": "سابع 1",
+    "years": "أقل من سنة",
+    "teaching": {
+      "clarity": 4,
+      "practical": 4,
+      "time": 3,
+      "tools": 5,
+      "style": "مشاريع",
+      "comment": "تطبيقات الدرس على الواقع"
+    },
+    "attitude": {
+      "respect": 1,
+      "questions": 3,
+      "encourage": 2,
+      "fair": 1,
+      "overall_att": "جيد ومحترم",
+      "comfort": "أحياناً",
+      "comment": "جيد جدا"
+    },
+    "overall": {
+      "score": 3,
+      "recommend": "ربما",
+      "best": "الخبرة والمعرفة",
+      "suggest": "جيد",
+      "story": "يرفع الصوت"
+    }
   }
 ]

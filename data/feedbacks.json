@@ -1486,5 +1486,36 @@
       "suggest": "لشيؤء",
       "story": "رياقىقخسه6"
     }
+  },
+  {
+    "id": 1778381023229,
+    "date": "2026-05-10T02:43:43.229Z",
+    "name": "احمد ابراهيم",
+    "class": "خامس 2",
+    "years": "أقل من سنة",
+    "teaching": {
+      "clarity": 5,
+      "practical": 5,
+      "time": 5,
+      "tools": 5,
+      "style": "",
+      "comment": "محكاة واقعية للدرس"
+    },
+    "attitude": {
+      "respect": 5,
+      "questions": 5,
+      "encourage": 5,
+      "fair": 5,
+      "overall_att": "ممتاز ومحفز",
+      "comfort": "نعم دائماً",
+      "comment": "اسلوب هادىء"
+    },
+    "overall": {
+      "score": 5,
+      "recommend": "نعم بشدة",
+      "best": "الصبر والهدوء",
+      "suggest": "شكرا..",
+      "story": "لانه داىما يصبر علينا"
+    }
   }
 ]

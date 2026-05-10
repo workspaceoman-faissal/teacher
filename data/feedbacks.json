@@ -2664,5 +2664,36 @@
       "suggest": "الاستاذ متميز \nاعطائي درجة 100 في المادة",
       "story": "سمح لي ببعض الوقت لعمل المشروع"
     }
+  },
+  {
+    "id": 1778392377725,
+    "date": "2026-05-10T05:52:57.725Z",
+    "name": "محمد العامري 912",
+    "class": "سابع 1",
+    "years": "أقل من سنة",
+    "teaching": {
+      "clarity": 4,
+      "practical": 5,
+      "time": 4,
+      "tools": 5,
+      "style": "تطبيق عملي",
+      "comment": ""
+    },
+    "attitude": {
+      "respect": 3,
+      "questions": 5,
+      "encourage": 4,
+      "fair": 5,
+      "overall_att": "ممتاز ومحفز",
+      "comfort": "نعم دائماً",
+      "comment": ""
+    },
+    "overall": {
+      "score": 3,
+      "recommend": "نعم بشدة",
+      "best": "الخبرة والمعرفة",
+      "suggest": "ااا",
+      "story": "اااااا"
+    }
   }
 ]

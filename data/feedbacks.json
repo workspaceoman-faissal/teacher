@@ -3346,5 +3346,36 @@
       "suggest": "الصبر على الطلبة المشاغبين",
       "story": ""
     }
+  },
+  {
+    "id": 1778478332146,
+    "date": "2026-05-11T05:45:32.146Z",
+    "name": "عمر اسلام",
+    "class": "خامس 3",
+    "years": "أقل من سنة",
+    "teaching": {
+      "clarity": 5,
+      "practical": 4,
+      "time": 3,
+      "tools": 5,
+      "style": "تطبيق عملي",
+      "comment": "ؤ"
+    },
+    "attitude": {
+      "respect": 5,
+      "questions": 4,
+      "encourage": 5,
+      "fair": 5,
+      "overall_att": "ممتاز ومحفز",
+      "comfort": "نعم دائماً",
+      "comment": ""
+    },
+    "overall": {
+      "score": 5,
+      "recommend": "نعم بشدة",
+      "best": "التعامل الجيد",
+      "suggest": "ي",
+      "story": "ف"
+    }
   }
 ]

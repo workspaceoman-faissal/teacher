@@ -3160,5 +3160,36 @@
       "suggest": "احسنت انا الاستاز رائع",
       "story": ""
     }
+  },
+  {
+    "id": 1778478242947,
+    "date": "2026-05-11T05:44:02.947Z",
+    "name": "اسامه عياد فاضل",
+    "class": "خامس 3",
+    "years": "أقل من سنة",
+    "teaching": {
+      "clarity": 3,
+      "practical": 5,
+      "time": 3,
+      "tools": 5,
+      "style": "تطبيق عملي",
+      "comment": "سهل و يجبني وريد التقليل من وقت الشرح اريد بلعملي"
+    },
+    "attitude": {
+      "respect": 4,
+      "questions": 4,
+      "encourage": 4,
+      "fair": 3,
+      "overall_att": "جيد ومحترم",
+      "comfort": "نعم دائماً",
+      "comment": "انه ضريف"
+    },
+    "overall": {
+      "score": 3,
+      "recommend": "ربما",
+      "best": "طريقة الشرح",
+      "suggest": "عدم العصبيه",
+      "story": "ايجابي انه يمزح معي"
+    }
   }
 ]

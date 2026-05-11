@@ -3439,5 +3439,36 @@
       "suggest": "التركيز مع الاستاذ",
       "story": ""
     }
+  },
+  {
+    "id": 1778478411880,
+    "date": "2026-05-11T05:46:51.880Z",
+    "name": "نضال زين",
+    "class": "خامس 3",
+    "years": "",
+    "teaching": {
+      "clarity": 5,
+      "practical": 4,
+      "time": 5,
+      "tools": 5,
+      "style": "مشاريع",
+      "comment": "no comments"
+    },
+    "attitude": {
+      "respect": 4,
+      "questions": 5,
+      "encourage": 5,
+      "fair": 5,
+      "overall_att": "ممتاز ومحفز",
+      "comfort": "نعم دائماً",
+      "comment": ""
+    },
+    "overall": {
+      "score": 5,
+      "recommend": "نعم بشدة",
+      "best": "طريقة الشرح",
+      "suggest": "no comments",
+      "story": "عندما دخلت للصف كان يهزر معي"
+    }
   }
 ]

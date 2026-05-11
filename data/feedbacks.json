@@ -3253,5 +3253,36 @@
       "suggest": "عدم العصبية",
       "story": "المزح معي"
     }
+  },
+  {
+    "id": 1778478303647,
+    "date": "2026-05-11T05:45:03.647Z",
+    "name": "مروان حاتم",
+    "class": "خامس 3",
+    "years": "",
+    "teaching": {
+      "clarity": 5,
+      "practical": 5,
+      "time": 4,
+      "tools": 5,
+      "style": "تطبيق عملي",
+      "comment": ""
+    },
+    "attitude": {
+      "respect": 1,
+      "questions": 5,
+      "encourage": 5,
+      "fair": 0,
+      "overall_att": "ممتاز ومحفز",
+      "comfort": "أحياناً",
+      "comment": ""
+    },
+    "overall": {
+      "score": 5,
+      "recommend": "نعم بشدة",
+      "best": "التعامل الجيد",
+      "suggest": "ان المعلم يكون هادء",
+      "story": ""
+    }
   }
 ]

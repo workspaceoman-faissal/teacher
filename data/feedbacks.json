@@ -2943,5 +2943,36 @@
       "suggest": "و",
       "story": ""
     }
+  },
+  {
+    "id": 1778470478145,
+    "date": "2026-05-11T03:34:38.145Z",
+    "name": "مجهول",
+    "class": "خامس 1",
+    "years": "سنة كاملة",
+    "teaching": {
+      "clarity": 3,
+      "practical": 4,
+      "time": 1,
+      "tools": 2,
+      "style": "",
+      "comment": ""
+    },
+    "attitude": {
+      "respect": 2,
+      "questions": 3,
+      "encourage": 4,
+      "fair": 3,
+      "overall_att": "يحتاج تحسين",
+      "comfort": "لا أبداً",
+      "comment": "انمنى ان يهامل الطلاب نفس الكل"
+    },
+    "overall": {
+      "score": 3,
+      "recommend": "لا",
+      "best": "طريقة الشرح",
+      "suggest": "ان تعامل الطلاب مثل الباقي",
+      "story": "ان يعامل الطلاب مثل البال\nقي"
+    }
   }
 ]

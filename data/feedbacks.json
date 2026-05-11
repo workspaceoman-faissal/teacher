@@ -2819,5 +2819,36 @@
       "suggest": "احترام المعلم للطلابة ممتاز",
       "story": ""
     }
+  },
+  {
+    "id": 1778470912495,
+    "date": "2026-05-11T03:41:52.495Z",
+    "name": "احمد  علي العماد",
+    "class": "خامس 1",
+    "years": "سنة كاملة",
+    "teaching": {
+      "clarity": 5,
+      "practical": 4,
+      "time": 5,
+      "tools": 4,
+      "style": "تطبيق عملي",
+      "comment": "انه يشرح بحماس"
+    },
+    "attitude": {
+      "respect": 3,
+      "questions": 4,
+      "encourage": 5,
+      "fair": 3,
+      "overall_att": "جيد ومحترم",
+      "comfort": "نعم دائماً",
+      "comment": "انه محترم"
+    },
+    "overall": {
+      "score": 5,
+      "recommend": "نعم بشدة",
+      "best": "الحماس والتحفيز",
+      "suggest": "ان يكون يصالح الطلاب بهداوه",
+      "story": "انه يحمسنا"
+    }
   }
 ]

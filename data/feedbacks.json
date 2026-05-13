@@ -3501,5 +3501,36 @@
       "suggest": "ان يختار جميع الطلاب",
       "story": ""
     }
+  },
+  {
+    "id": 1778643024141,
+    "date": "2026-05-13T03:30:24.141Z",
+    "name": "عليجارالله",
+    "class": "خامس 4",
+    "years": "أقل من سنة",
+    "teaching": {
+      "clarity": 5,
+      "practical": 5,
+      "time": 5,
+      "tools": 5,
+      "style": "مشاريع",
+      "comment": ""
+    },
+    "attitude": {
+      "respect": 5,
+      "questions": 5,
+      "encourage": 5,
+      "fair": 5,
+      "overall_att": "ممتاز ومحفز",
+      "comfort": "نعم دائماً",
+      "comment": "كل شي"
+    },
+    "overall": {
+      "score": 5,
+      "recommend": "نعم بشدة",
+      "best": "طريقة الشرح",
+      "suggest": "با حترف",
+      "story": "لا"
+    }
   }
 ]

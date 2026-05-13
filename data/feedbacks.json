@@ -3718,5 +3718,36 @@
       "suggest": "انه شاطر",
       "story": "يعاملني معاملة حلوة"
     }
+  },
+  {
+    "id": 1778643439605,
+    "date": "2026-05-13T03:37:19.605Z",
+    "name": "حذيفه",
+    "class": "خامس 4",
+    "years": "سنة كاملة",
+    "teaching": {
+      "clarity": 5,
+      "practical": 5,
+      "time": 5,
+      "tools": 5,
+      "style": "",
+      "comment": "الاستاذ ممتازومتقن في عمله ومتمز في الماده"
+    },
+    "attitude": {
+      "respect": 5,
+      "questions": 5,
+      "encourage": 5,
+      "fair": 5,
+      "overall_att": "جيد ومحترم",
+      "comfort": "نعم دائماً",
+      "comment": "المعلم ممتاز جداا"
+    },
+    "overall": {
+      "score": 5,
+      "recommend": "نعم بشدة",
+      "best": "الحماس والتحفيز",
+      "suggest": "ممتاز جداا ومتمكن من الماده",
+      "story": "الصبر"
+    }
   }
 ]
